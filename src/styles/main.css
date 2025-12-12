@@ -1,0 +1,23 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #fafafa;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.list {
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.error {
+  color: red;
+}
