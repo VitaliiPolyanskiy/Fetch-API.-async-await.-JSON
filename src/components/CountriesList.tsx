@@ -8,7 +8,8 @@ const CountriesList: React.FC<Props> = ({ countries }) => {
     <ul className="list">
       {Object.entries(countries).map(([country, capital]) => (
         <li key={country} className="item">
-          <strong>{country}</strong> — {capital}
+          <strong>{country}</strong>
+          <span>{capital}</span>
         </li>
       ))}
     </ul>

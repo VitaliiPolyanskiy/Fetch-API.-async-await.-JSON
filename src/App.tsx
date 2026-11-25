@@ -11,7 +11,7 @@ const App: React.FC = () => {
     const loadCountries = async () => {
       try {
         const res = await fetch("/countries.json");
-        if (!res.ok) throw new Error("Ошибка загрузки JSON");
+        if (!res.ok) throw new Error("Помилка завантаження JSON");
 
         const data: CountriesMap = await res.json();
         setCountries(data);
@@ -27,9 +27,9 @@ const App: React.FC = () => {
 
   return (
     <div className="app">
-      <h1>Страны и столицы</h1>
+      <h1>Країни та столиці</h1>
 
-      {loading && <div>Загрузка…</div>}
+      {loading && <div className="status">Завантаження…</div>}
       {error && <div className="error">{error}</div>}
       {countries && <CountriesList countries={countries} />}
     </div>
